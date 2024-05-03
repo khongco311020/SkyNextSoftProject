@@ -1,0 +1,22 @@
+.container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #000;
+  opacity: 0.75;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 40px;
+  /* margin-left: 10px; */
+}
+
+.img {
+  width: 80px !important;
+  position: relative !important;
+  object-fit: contain;
+}
