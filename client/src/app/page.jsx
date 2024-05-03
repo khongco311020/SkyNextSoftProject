@@ -2,13 +2,17 @@
 import React, { useState, useEffect } from "react";
 import styles from "./home.module.css";
 import Image from "next/image";
-
+import Link from "next/link";
+import { AiTwotoneLike } from "react-icons/ai";
+import { GiMightySpanner } from "react-icons/gi";
+import { SiEsotericsoftware } from "react-icons/si";
+import { FaComputer } from "react-icons/fa6";
 const Home = () => {
   const images = [
-    "/nganhcongnghe.jpg",
-    "/chuyendoiso1.jpg",
-    "/post1.jpg",
+    "/AnhIT1.jpg",
+    "/AnhIT2.jpg",
     "https://pizza-time-with-react.vercel.app/static/media/section-one-1440.bd60dc8a558f85b4ffe7.webp",
+    "https://etsgroup.vn/wp-content/uploads/2022/01/Ets-banner.jpg",
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -24,7 +28,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.wrap}>
       <div className={styles.slides}>
         <div className={styles.image}>
           <Image
@@ -35,81 +39,119 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className={styles.home2}>
-        <h1>Công Ty công nghệ hàng đầu Việt Nam</h1>
-        <div>
-          <p>
-            SkyNext Soft cung cấp các chuyên gia hàng đầu về lập trình cho thị
-            trường quốc tế. Chúng tôi tập trung toàn bộ vào công nghệ và mang
-            tới dịch vụ chất lượng cao nhất cho khách hàng ở 2 mảng: Phát triển
-            web và ứng dụng di động.
-          </p>
+
+      <div className={styles.wrapNoneFlex}>
+        <div className={styles.containerCl}>
+          <Link href="/contact">
+            <div className={styles.tag}>
+              <p>Uy tín - Tin cậy</p>
+              <div className={styles.icon}>
+                <AiTwotoneLike />
+              </div>
+            </div>
+          </Link>
+          <Link href="/contact">
+            <div className={styles.tag}>
+              <p>Hiệu quả - Tiết Kiệm</p>
+              <div className={styles.icon}>
+                <GiMightySpanner />
+              </div>
+            </div>
+          </Link>
+          <Link href="/contact">
+            <div className={styles.tag}>
+              <p>Chuyên nghiệp - Tận tâm</p>
+              <div className={styles.icon}>
+                <SiEsotericsoftware />
+              </div>
+            </div>
+          </Link>
+          <Link href="/contact">
+            <div className={styles.tag}>
+              <p>Đáp ứng nhanh chóng</p>
+              <div className={styles.icon}>
+                <FaComputer />
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
-      <div className={styles.home3}>
-        <Image
-          src="/AnhIT1.jpg"
-          alt=""
-          width={500}
-          height={400}
-          objectFit="cover"
-        />
-        <div>
-          <p style={{ color: "#0bbee7", font: "initial", fontSize: "20px" }}>
-            Về chúng tôi
-          </p>
-          <p>
-            Trong nhiều năm làm việc chuyên sâu về ReactJs, đào tạo các nhân sự
-            cho các dự án quy mô quốc tế, React Plus đã xây dựng một khoá học
-            hoàn chỉnh giúp các developer trẻ hoặc sinh viên mới ra trường có cơ
-            hội tiếp cận và có thể bước đầu làm việc với ReactJs & React Native.
-          </p>
-          <ul>
-            <li>Smart</li>
-            <li>Speed</li>
-            <li>Strong</li>
-            <li>Secure</li>
-          </ul>
+
+      <div className={styles.wrapCl}>
+        <div className={styles.container}>
+          <div className={styles.image2}>
+            <Image src="/AnhIT1.jpg" alt="" width={500} height={400} />
+          </div>
+          <div>
+            <p style={{ color: "#0bbee7", font: "initial", fontSize: "20px" }}>
+              Về chúng tôi
+            </p>
+            <p>
+              Trong nhiều năm làm việc chuyên sâu về ReactJs, đào tạo các nhân
+              sự cho các dự án quy mô quốc tế, React Plus đã xây dựng một khoá
+              học hoàn chỉnh giúp các developer trẻ hoặc sinh viên mới ra trường
+              có cơ hội tiếp cận và có thể bước đầu làm việc với ReactJs & React
+              Native.
+            </p>
+            <ul className={styles.theUl}>
+              <li>Smart</li>
+              <li>Speed</li>
+              <li>Strong</li>
+              <li>Secure</li>
+              <button className={styles.btnmore}>
+                <span>
+                  <Link href="/about">Xem thêm...</Link>
+                </span>
+              </button>
+            </ul>
+          </div>
         </div>
       </div>
+
+      <div className={styles.wrap}>
+        <div className={styles.wrapCl}>
+          <div className={styles.wrapcol}>
+            <Image src="/SuMenh.jpg" alt="" width={334} height={175} />
+            <h2 className={styles.wraph2}>Sứ mệnh</h2>
+            <div className={styles.wrapp}>
+              <p style={{ padding: "10px" }}>
+                Cung cấp chuyên gia về React & React Native Thoả mãn khách
+                hàngvới chất lượng cao nhất. Tạo dựng cộng đồng kỹ sư React lớn
+                nhất tại Việt Nam.
+              </p>
+            </div>
+            <button className={styles.btnmore}>
+              <span>
+                <Link href="/blog">Tìm hiểu thêm</Link>
+              </span>
+            </button>
+          </div>
+          <div className={styles.wrapcol}>
+            <Image src="/GiaTriCotLoi.jpg" alt="" width={334} height={175} />
+            <h2 className={styles.wraph2}>Giá trị cốt lõi</h2>
+            <div className={styles.wrapp}>
+              <p style={{ padding: "10px" }}>
+                Chuyên biệt về React Khả năng tăng trưởng nhanh Chuyên gia thực
+                sự Phải hồi ngay tức thì
+              </p>
+            </div>
+            <button className={styles.btnmore}>
+              <span>
+                <Link href="/blog">Tìm hiểu thêm</Link>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div className={styles.home4}>
         <h3>Đối Tác - Khách Hàng</h3>
         <div>
-          <Image
-            alt="doitac"
-            src="/cong-an.jpg"
-            width={180}
-            height={180}
-            layout="fixed"
-          />
-          <Image
-            alt="doitac"
-            src="/mobifone.jpg"
-            width={180}
-            height={180}
-            layout="fixed"
-          />
-          <Image
-            alt="doitac"
-            src="/viettel.jpg"
-            width={180}
-            height={180}
-            layout="fixed"
-          />
-          <Image
-            alt="doitac"
-            src="/vinaphone.jpg"
-            width={180}
-            height={180}
-            layout="fixed"
-          />
-          <Image
-            alt="doitac"
-            src="/vietlott.jpg"
-            width={180}
-            height={180}
-            layout="fixed"
-          />
+          <Image alt="doitac" src="/cong-an.jpg" width={180} height={180} />
+          <Image alt="doitac" src="/mobifone.jpg" width={180} height={180} />
+          <Image alt="doitac" src="/viettel.jpg" width={180} height={180} />
+          <Image alt="doitac" src="/vinaphone.jpg" width={180} height={180} />
+          <Image alt="doitac" src="/vietlott.jpg" width={180} height={180} />
         </div>
       </div>
     </div>

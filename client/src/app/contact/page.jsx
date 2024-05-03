@@ -18,7 +18,6 @@ const ContactPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Kiểm tra xem có thông tin nào chưa được nhập không
     if (!fullName || !email || !phone || !message) {
       setErrorMessage("Please fill in all fields");
       return;
@@ -40,12 +39,17 @@ const ContactPage = () => {
   };
 
   return (
-    <div>
+    <div className={styles.wrap}>
       <div className={styles.container}>
         <div className={styles.imgContainer}>
-          <Image src="/contact.png" alt="" fill className={styles.img} />
+          <Image
+            src="/contact.png"
+            alt=""
+            width={600}
+            height={400}
+            className={styles.img}
+          />
         </div>
-        {/* <Googlemap /> */}
         <div className={styles.formContainer}>
           {sentSuccess && (
             <div className={styles.successMessage}>
@@ -92,17 +96,27 @@ const ContactPage = () => {
           )}
         </div>
       </div>
-      <Googlemap />
-      <div
-        style={{
-          display: "flex",
-          gap: "10px",
-          marginTop: "20px",
-          alignItems: "center",
-        }}
-      >
-        <BsBuilding />
-        <div>Số 7, Dãy 2, Ngõ 651 Minh Khai, Hai Bà Trưng, Hà Nội</div>
+      <div className={styles.container}>
+        <div className={styles.contactName}>
+          <h3 style={{ textDecoration: "underline" }}>
+            Công Ty cổ phần SkyNextSoft
+          </h3>
+          <div className={styles.dflex}>
+            <BsBuilding />
+            <p>Số 7, Dãy 2, Ngõ 651 Minh Khai, Hai Bà Trưng, Hà Nội</p>
+          </div>
+          <div className={styles.dflex}>
+            <BsBuilding />
+            <p>Skynextsoft@gmail.com</p>
+          </div>
+          <div className={styles.dflex}>
+            <BsBuilding />
+            <p>0388-666-888</p>
+          </div>
+        </div>
+        <div style={{ width: "500px" }}>
+          <Googlemap />
+        </div>
       </div>
     </div>
   );

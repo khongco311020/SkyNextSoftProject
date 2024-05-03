@@ -5,8 +5,6 @@
   flex-direction: column;
 }
 
-
-
 .textContainer {
   flex: 1;
   display: flex;
@@ -34,15 +32,18 @@
 
 .boxes {
   display: flex;
-  
+
   justify-content: space-between;
   gap: 30px;
   width: 1020px;
   margin: auto;
-  
-  
 }
-
+.box:hover .boxImg {
+  transform: rotate(45deg);
+}
+.boxImg {
+  transition: transform 0.7s ease;
+}
 .box {
   display: flex;
   flex-direction: column;
@@ -51,7 +52,7 @@
   width: 33%;
   text-align: center;
   padding: 20px;
-  border-right: 1px #4F4F4F;
+  border-right: 1px #4f4f4f;
 }
 
 .box h1 {
@@ -78,18 +79,18 @@
     gap: 50px;
   }
 }
-.itemmap{
+.itemmap {
   display: flex;
   margin-top: 30px;
 }
-.textAddress{
+.textAddress {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   gap: 16px;
 }
-.boxImg{
+.boxImg {
   height: 74px;
   width: 74px;
   background-color: white;
@@ -99,53 +100,47 @@
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 21px 3px;
 }
-.wrap{
+.wrap {
   margin-top: 30px;
- 
 }
-.wrapcontainer{
+.wrapcontainer {
   display: flex;
   gap: 30px;
   width: 1020px;
   margin: auto;
 }
-.wrapcol{
+.wrapcol {
   width: 33%;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 4px;
 }
-.wraph2{
+.wraph2 {
   padding: 0 20px;
- }
-.wrapp{
+}
+.wrapp {
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding: 0 20px;
   padding-bottom: 20px;
-} 
-.wrappad{
+}
+.wrappad {
   display: flex;
   flex-direction: column;
   gap: 25px;
- 
 }
 
-
-.achive{
+.achive {
   margin-top: 30px;
 }
-.achivecontainer{
+.achivecontainer {
   display: flex;
   gap: 30px;
 }
-.achivecol{
+.achivecol {
   width: 50%;
 }
-.achivecontent{
+.achivecontent {
   display: flex;
   flex-direction: column;
-  gap: 30px
-  ;
+  gap: 30px;
 }
-
-

@@ -1,22 +1,18 @@
+.wrap {
+  color: var(--textSoft);
+  padding: 20px;
+}
 .container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 100px;
   color: black;
 }
 
-.imgContainer {
-  flex: 1;
-  height: 500px;
-  position: relative;
-}
-
 .img {
-  object-fit: contain;
-}
-
-.formContainer {
-  flex: 1;
+  object-fit: cover;
+  width: 100%;
 }
 
 .form {
@@ -47,6 +43,17 @@
 .formContainer {
   color: aquamarine;
   font-size: xx-large;
+}
+
+.contactName {
+  display: flex;
+  gap: 14px;
+  flex-direction: column;
+}
+.dflex {
+  display: flex;
+  gap: 14px;
+  padding: 10px;
 }
 .errorMessage {
   color: red;
