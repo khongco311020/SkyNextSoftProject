@@ -14,6 +14,10 @@ const blogSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    highlight: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

@@ -7,7 +7,6 @@ import contactRoute from "./routes/contactRoute.js";
 import cors from "cors";
 const app = express();
 
-//middleware for parsing raquest body
 app.use(express.json());
 app.use(cors());
 

@@ -6,13 +6,19 @@ const router = express.Router();
 // Route for save a new Blog
 router.post("/", async (request, response) => {
   try {
-    if (!request.body.title || !request.body.content || !request.body.image) {
+    if (
+      !request.body.title ||
+      !request.body.content ||
+      !request.body.image ||
+      !request.body.highlight
+    ) {
       return response.status(400).send({
-        message: "Send all required fields: title, content, image",
+        message: "Send all required fields: title, content, image , highlight",
       });
     }
     const newBlog = {
       title: request.body.title,
+      highlight: request.body.highlight,
       content: request.body.content,
       image: request.body.image,
     };
@@ -57,7 +63,12 @@ router.get("/:id", async (request, response) => {
 // Route for Update One Blog from database
 router.put("/:id", async (request, response) => {
   try {
-    if (!request.body.title || !request.body.content || !request.body.image) {
+    if (
+      !request.body.title ||
+      !request.body.content ||
+      !request.body.image ||
+      !request.body.highlight
+    ) {
       return response.status(400).send({
         message: "send all request fields: title, content, image",
       });

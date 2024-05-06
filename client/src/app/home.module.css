@@ -72,14 +72,16 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  width: 40%;
+  align-items: center;
   padding: 20px;
 }
 
-.wrapcol {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.wrapcol img {
+  object-fit: cover;
+  border-radius: 5px;
+  width: 330px;
+  height: 250px;
 }
 .containerCl {
   display: flex;

@@ -9,8 +9,7 @@ import { SiEsotericsoftware } from "react-icons/si";
 import { FaComputer } from "react-icons/fa6";
 const Home = () => {
   const images = [
-    "/AnhIT1.jpg",
-    "/AnhIT2.jpg",
+    "/AnhIT3.jpg",
     "https://pizza-time-with-react.vercel.app/static/media/section-one-1440.bd60dc8a558f85b4ffe7.webp",
     "https://etsgroup.vn/wp-content/uploads/2022/01/Ets-banner.jpg",
   ];
@@ -22,7 +21,7 @@ const Home = () => {
       setCurrentSlide((prevSlide) =>
         prevSlide === images.length - 1 ? 0 : prevSlide + 1
       );
-    }, 5000);
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, []);
