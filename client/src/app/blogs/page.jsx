@@ -70,7 +70,7 @@ const Blog = () => {
                   </div>
                   <div className={styles.bottom}>
                     <h1 className={styles.title}>{blog.title}</h1>
-                    <p className={styles.content}>{blog.content}</p>
+                    <p className={styles.content}>{blog.highlight}</p>
                     <Link href={`/blogs/${blog._id}`}>
                       <span
                         className={styles.morehover}
@@ -139,9 +139,6 @@ const Blog = () => {
           </li>
           <li>
             <Image src="/mcs.png" width={150} height={50} />
-          </li>
-          <li>
-            <Image src="/landing.svg" width={150} height={100} />
           </li>
         </div>
       </div>
