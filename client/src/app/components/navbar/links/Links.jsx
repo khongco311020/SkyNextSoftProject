@@ -1,28 +1,32 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "next-i18next";
 import styles from "./links.module.css";
-import NavLink from "./navLink/navLink";
+import NavLink from "./navLinks/navLink";
+import { useLocale } from "next-intl";
 
 const Links = () => {
   const [open, setOpen] = useState(false);
+  const locale = useLocale();
+  const { t } = useTranslation();
 
   const links = [
     {
-      title: "Home",
+      title: t("Home"),
       path: "/",
     },
     {
-      title: "About",
-      path: "/about",
+      title: t("About"),
+      path: `/about`,
     },
     {
-      title: "Blog",
-      path: "/blogs",
+      title: t("Blog"),
+      path: `/blogs`,
     },
     {
-      title: "Contact",
-      path: "/contact",
+      title: t("Contact"),
+      path: `/contact`,
     },
   ];
 

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import dayjs from "dayjs";
 import Image from "next/image";
-import ReactPaginate from "react-paginate";
+// import ReactPaginate from "react-paginate";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -84,7 +84,7 @@ const Blog = () => {
               </div>
             ))}
           </div>
-          <div>
+          {/* <div>
             <ReactPaginate
               previousLabel={"<<"}
               nextLabel={">>"}
@@ -96,7 +96,7 @@ const Blog = () => {
               disabledClassName={styles.paginationDisabled}
               activeClassName={styles.paginationActive}
             />
-          </div>
+          </div> */}
         </div>
         <div className={styles.blogcol2} data-aos="fade-left">
           <div className={styles.null}></div>

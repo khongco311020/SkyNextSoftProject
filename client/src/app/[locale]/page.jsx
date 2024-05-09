@@ -7,7 +7,11 @@ import { AiTwotoneLike } from "react-icons/ai";
 import { GiMightySpanner } from "react-icons/gi";
 import { SiEsotericsoftware } from "react-icons/si";
 import { FaComputer } from "react-icons/fa6";
+// import { useLocale } from "next-intl";
 const Home = () => {
+  // const local = useLocale();
+  // console.log(local);
+
   const images = [
     "/AnhIT3.jpg",
     "https://pizza-time-with-react.vercel.app/static/media/section-one-1440.bd60dc8a558f85b4ffe7.webp",
@@ -120,9 +124,9 @@ const Home = () => {
               </p>
             </div>
             <button className={styles.btnmore}>
-              <span>
-                <Link href="/blog">Tìm hiểu thêm</Link>
-              </span>
+              {/* <span>
+                <Link href={`/${local}/blogs`}>Tìm hiểu thêm</Link>
+              </span> */}
             </button>
           </div>
           <div className={styles.wrapcol}>

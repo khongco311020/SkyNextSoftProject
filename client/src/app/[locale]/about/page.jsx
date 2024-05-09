@@ -1,16 +1,20 @@
+"use client";
 import Image from "next/image";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next"; //Không phải thằng này
+import { useTranslations } from "next-intl";
 import styles from "./about.module.css";
 import Googlemap from "../contact/Googlemap";
 import { IoLocationOutline } from "react-icons/io5";
 
-export const metadata = {
-  title: "About Page",
-  description: "About description",
-};
+// export const metadata = {
+//   title: "About Page",
+//   description: "About description",
+// };
 
 const AboutPage = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslations("about");
+  // Import  useTranslations chứ k phải useTranslation
+  //Trước em cũng dính mấy lần
 
   return (
     <div>
